@@ -17,9 +17,9 @@ Joint research project between NCSU, UNC Chapel Hill and Duke University to dete
 13. Jupyter (to process ipython notebooks)
 
 ## How to run?
-Instructions to run the files are all placed in the sub folders
-Unless explicitly stated, each python file can be run uwing python filename
-Except for classifyImage python files, for which you ahve to give start and end row numbers (described in specific folders)
+*Instructions to run the files are all placed in the sub folders
+*Unless explicitly stated, each python file can be run using ```python filename```
+*Except for classifyImage python files, for which you ahve to give start and end row numbers as command line arguments (described in specific folders)
 
 ## Pipeline
 1. First generate features either using the code in feature-generation folder, or using any tool/software such as ARCGIS/ENVI. You need NDBI, Haralick Texture Features, Edge Density as features
