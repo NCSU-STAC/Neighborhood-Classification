@@ -24,5 +24,5 @@ trainX, trainY = shuffle(trainX, trainY)
 
 # Train the model
 model.fit(trainX, trainY, n_epoch=256,validation_set= 0.2, show_metric=True, run_id="deep_nn1", batch_size = 128,snapshot_step=100000)
-model.save("/home/kgadira/NN-Slum/filtered-model-2-cl-final/final-model.tflearn")
+model.save("../models/filtered-model-2-cl-final/final-model.tflearn")
 
