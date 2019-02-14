@@ -22,10 +22,10 @@ from sklearn.ensemble import AdaBoostClassifier
 np.random.seed(100)
 
 # Read files 
-trainX = np.load('/scratch/slums/bl-slums/gt/filtered-L1-L2-tr-X')
-trainY = np.load('/scratch/slums/bl-slums/gt/filtered-L1-L2-tr-Y')
-testX = np.load('/scratch/slums/bl-slums/gt/filtered-L1-L2-te-X')
-testY = np.load('/scratch/slums/bl-slums/gt/filtered-L1-L2-te-Y')
+trainX = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/filtered-L1-L2-tr-X')
+trainY = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/filtered-L1-L2-tr-Y')
+testX = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/filtered-L1-L2-te-X')
+testY = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/filtered-L1-L2-te-Y')
 
 trainY = trainY.ravel()
 testY = testY.ravel()
