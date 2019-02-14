@@ -54,7 +54,7 @@ print 'Overall accuracy = {}\n'.format(acc)
 print 'Confusion Matrix \n {}\n'.format(cm)
 print 'Classification Report \n {}\n'.format(cr)
 
-fname = '../models/filtered-L2-xgboost-model.sav'
+fname = './models/filtered-L2-xgboost-model.sav'
 pickle.dump(xgb, open(fname, 'wb'))
 
 print "==================================================================="
@@ -72,7 +72,7 @@ print 'Overall accuracy = {}\n'.format(acc)
 print 'Confusion Madtrix \n {}\n'.format(cm)
 print 'Classification Report \n {}\n'.format(cr)
 
-fname = '../models/filtered-L2-rf-model.sav'
+fname = './models/filtered-L2-rf-model.sav'
 pickle.dump(rf, open(fname, 'wb'))
 
 print "==================================================================="
@@ -89,7 +89,7 @@ print 'Overall accuracy = {}\n'.format(acc)
 print 'Confusion Matrix \n {}\n'.format(cm)
 print 'Classification Report \n {}\n'.format(cr)
 
-fname = '../models/filtered-L2-gnb-model.sav'
+fname = './models/filtered-L2-gnb-model.sav'
 pickle.dump(nb, open(fname, 'wb'))
 
 print "==================================================================="
@@ -107,7 +107,7 @@ print 'Overall accuracy = {}\n'.format(acc)
 print 'Confusion Matrix \n {}\n'.format(cm)
 print 'Classification Report \n {}\n'.format(cr)
 
-fname = '../models/filtered-L2-dt-model.sav'
+fname = './models/filtered-L2-dt-model.sav'
 pickle.dump(dt, open(fname, 'wb'))
 
 print "==================================================================="
@@ -125,7 +125,7 @@ print 'Overall accuracy = {}\n'.format(acc)
 print 'Confusion Matrix \n {}\n'.format(cm)
 print 'Classification Report \n {}\n'.format(cr)
 
-fname = '../models/filtered-L2-knn-model.sav'
+fname = './models/filtered-L2-knn-model.sav'
 pickle.dump(knn, open(fname, 'wb'))
 
 print "==================================================================="
@@ -143,7 +143,7 @@ print 'Overall accuracy = {}\n'.format(acc)
 print 'Confusion Matrix \n {}\n'.format(cm)
 print 'Classification Report \n {}\n'.format(cr)
 
-fname = '../models/filtered-L2-mlp-model.sav'
+fname = './models/filtered-L2-mlp-model.sav'
 pickle.dump(mlp, open(fname, 'wb'))
 
 print "==================================================================="
@@ -161,7 +161,7 @@ print 'Overall accuracy = {}\n'.format(acc)
 print 'Confusion Matrix \n {}\n'.format(cm)
 print 'Classification Report \n {}\n'.format(cr)
 
-fname = '../models/filtered-L2-adaboost-model.sav'
+fname = './models/filtered-L2-adaboost-model.sav'
 pickle.dump(adb, open(fname, 'wb'))
 
 print "==================================================================="

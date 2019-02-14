@@ -25,14 +25,14 @@ import pickle
 np.random.seed(100)
 
 # Read files 
-trainX = np.load('/home/kgadira/data/filtered-L1-L2-tr-X')
-trainY = np.load('/home/kgadira/data/filtered-L1-L2-tr-Y')
-testX = np.load('/home/kgadira/data/filtered-L1-L2-te-X')
-testY = np.load('/home/kgadira/data/filtered-L1-L2-te-Y')
+trainX = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/filtered-L1-L2-tr-X')
+trainY = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/filtered-L1-L2-tr-Y')
+testX = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/filtered-L1-L2-te-X')
+testY = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/filtered-L1-L2-te-Y')
 
 
-train_L3_Y = np.load('/home/kgadira/data/filtered-L1-L3-tr-Y')
-test_L3_Y = np.load('/home/kgadira/data/filtered-L1-L2-te-Y')
+train_L3_Y = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/filtered-L1-L3-tr-Y')
+test_L3_Y = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/filtered-L1-L2-te-Y')
 
 
 trainY = trainY.ravel()
@@ -48,7 +48,7 @@ for clf_path in models_list:
 
     print "==================================================================="
     
-    model = pickle.load(open('../models/filtered-L2-{}-model.sav'.format(clf_path),'rb'))
+    model = pickle.load(open('./models/filtered-L2-{}-model.sav'.format(clf_path),'rb'))
     result = model.predict(trainX)
     acc = accuracy_score(trainY, result)
     cm = confusion_matrix(trainY, result)
@@ -83,7 +83,7 @@ final_all_data_Y = np.hstack((trainY, testY))
 final_all_data_L3_Y = np.hstack((train_L3_Y, test_L3_Y))
 
 clf_path='rf'
-model = pickle.load(open('../models/filtered-L2-{}-model.sav'.format(clf_path),'rb'))
+model = pickle.load(open('./models/filtered-L2-{}-model.sav'.format(clf_path),'rb'))
 result = model.predict(final_all_data_X)
     
 print final_all_data_X.shape

@@ -1,3 +1,9 @@
+#####
+# Network to detect urban area mask 
+# @author: Krishna Karthik Gadiraju/kkgadiraju
+# References: TFLearn documentation and examples
+####
+
 import tflearn
 from tflearn.layers.core import input_data, dropout, fully_connected
 from tflearn.layers.conv import conv_2d, max_pool_2d
@@ -24,20 +30,8 @@ img_aug = ImageAugmentation()
 img_aug.add_random_flip_leftright()
 img_aug.add_random_flip_updown()
 img_aug.add_random_rotation(max_angle=90.)
-#img_aug.add_random_crop((8, 8))
 acc = Accuracy()
 
-def wloss(y_pred, y_true):
-    return tfl.weighted_crossentropy(y_pred, y_true, weight=2)
-
-def myloss(y_pred, y_true):
-    print '----------------------- {},{}'.format(y_pred.shape, y_true.shape)
-    class_weight = tf.constant([0.3,0.2,0.2,0.3])
-    error = tf.nn.softmax_cross_entropy_with_logits(labels=y_true, logits = y_pred)
-    print error.shape
-    scaled_error = tf.multiply(error, class_weight)
-    cost = tf.reduce_mean(scaled_error)
-    return cost
 network = input_data(shape=[None, 40, 40, 18],data_augmentation=img_aug)
 # Conv layers
 network = conv_2d(network, 64, 7, strides=1, activation='relu', regularizer='L2', name = 'conv1_3_3_1', weights_init='Xavier')
@@ -71,7 +65,7 @@ network = regression(network, optimizer='adam',
 
 # The model with details on where to save
 # Will save in current directory
-model = tflearn.DNN(network, checkpoint_path='/home/kgadira/NN-Slum/filtered-model-6-cl-final/model-', max_checkpoints = 3, tensorboard_verbose=1)
+model = tflearn.DNN(network, checkpoint_path='../models/filtered-model-2-cl-final/model-', max_checkpoints = 3, tensorboard_verbose=1)
 
 
 
