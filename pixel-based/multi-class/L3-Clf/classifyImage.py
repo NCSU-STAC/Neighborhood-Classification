@@ -1,3 +1,11 @@
+'''
+Classify a section of the image, since entire image doesn't fit in machine memory
+Take MININDEX and MAXINDEX, depending upon the classifer, classify that section 
+Allowed classifiers: rf - random forest, adaboost - adaboost, mlp - multi-layer perceptron, knn - nearest neighbor, xgb - xgboost
+Instead of saving as a geotiff file, saves as a numpy binary, all of which can be combined using scripts in postprocessing
+'''
+
+
 from osgeo import gdal
 import ogr
 import numpy as np

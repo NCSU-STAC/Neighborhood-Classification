@@ -1,3 +1,10 @@
+'''
+Classify a section of the image, since entire image doesn't fit in machine memory
+Take MININDEX and MAXINDEX, depending upon the classifer, classify that section 
+Allowed classifiers: rf - random forest, adaboost - adaboost, mlp - multi-layer perceptron, knn - nearest neighbor, xgb - xgboost
+Instead of saving as a geotiff file, saves as a numpy binary, all of which can be combined using scripts in postprocessing
+'''
+
 from osgeo import gdal
 import ogr
 import numpy as np
@@ -22,13 +29,13 @@ def write_image(imgrows, imgcols, imgbands, imggeotrans,edges, opath):
 clf_names = ['rf','adaboost','mlp']
 
 driver = gdal.GetDriverByName('GTiff')
-rasterFileName1 = "/home/kgadira/data/PS_mosaic_415.tif"
+rasterFileName1 = "/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/PS_mosaic_415.tif"
 dataset1 = gdal.Open(rasterFileName1)
-rasterFileName2 = "/home/kgadira/data/PS_mosaic_415_NDBI.tif"
+rasterFileName2 = "/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/PS_mosaic_415_NDBI.tif"
 dataset2 = gdal.Open(rasterFileName2)
-rasterFileName3 = "/home/kgadira/data/PAN_mosaic_415-simple-50.tif"
+rasterFileName3 = "/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/PAN_mosaic_415-simple-50.tif"
 dataset3 = gdal.Open(rasterFileName3)
-rasterFileName4 = "/home/kgadira/data/PAN_mosaic_415_edgeDensity.tif"
+rasterFileName4 = "/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/PAN_mosaic_415_edgeDensity.tif"
 dataset4 = gdal.Open(rasterFileName4)
 
 

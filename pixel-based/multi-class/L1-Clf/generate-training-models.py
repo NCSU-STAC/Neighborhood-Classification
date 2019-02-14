@@ -1,7 +1,8 @@
 '''
 Use this file to generate training models on NCSU's ARC cluster
 Note that grid search for finding the optimal hyperparameter configurations is done in the ipython notebook
-
+@author: Krishna Karthik Gadiraju/kkgadiraju
+Source: scikit learn tutorial/examples page
 '''
 
 
@@ -25,10 +26,10 @@ import pickle
 np.random.seed(100)
 
 # Read files 
-trainX = np.load('/home/kgadira/data/final-px-tr-2-Xa')
-trainY = np.load('/home/kgadira/data/final-px-tr-2-Ya')
-testX = np.load('/home/kgadira/data/final-px-te-2-Xa')
-testY = np.load('/home/kgadira/data/final-px-te-2-Ya')
+trainX = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/final-px-tr-2-Xa')
+trainY = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/final-px-tr-2-Ya')
+testX = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/final-px-te-2-Xa')
+testY = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/final-px-te-2-Ya')
 
 trainY = trainY.ravel()
 testY = testY.ravel()

@@ -25,10 +25,10 @@ import pickle
 np.random.seed(100)
 
 # Read files 
-trainX = np.load('/home/kgadira/data/final-px-tr-6-Xa')
-trainY = np.load('/home/kgadira/data/final-px-tr-6-Ya')
-testX = np.load('/home/kgadira/data/final-px-te-6-Xa')
-testY = np.load('/home/kgadira/data/final-px-te-6-Ya')
+trainX = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/final-px-tr-6-Xa')
+trainY = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/final-px-tr-6-Ya')
+testX = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/final-px-te-6-Xa')
+testY = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/final-px-te-6-Ya')
 
 trainY = trainY.ravel()
 testY = testY.ravel()
