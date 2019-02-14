@@ -25,7 +25,10 @@ xOrigin = transform[0]
 yOrigin = transform[3]
 pixelWidth = transform[1]
 pixelHeight = -transform[5]
-bands1=bands2=bands3=bands4=[]
+bands1=[]
+bands2=[]
+bands3=[]
+bands4=[]
 
 for i in range(8):
     bands1.append(dataset1.GetRasterBand(i+1)) 
