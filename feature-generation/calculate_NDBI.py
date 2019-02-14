@@ -47,8 +47,7 @@ def write_image(imgrows, imgcols, imgbands, imggeotrans,edges, opath):
     	outRaster.SetProjection(outRasterSRS.ExportToWkt())
     	outband.FlushCache()
 	
-#calculate NDVI values (NIR-R)/(NIR + R)
-def generate_NDVI():	
+def generate_NDBI():	
 	ipath = '/scratch/slums/bl-slums/raw-img/MUL_mosaic_415.tif'
 	[i1, imgrows, imgcols, imgbands, imggeotrans] = read_image(ipath)
 	print(imgrows, imgcols)
@@ -87,6 +86,6 @@ def generate_NDVI():
 
 if __name__ == "__main__":
 	print 'Starting...'
-	[imgrows, imgcols, imgbands, imggeotrans, edges] = generate_NDVI()
+	[imgrows, imgcols, imgbands, imggeotrans, edges] = generate_NDBI()
 	opath = '/scratch/slums/bl-slums/raw-img/MUL_mosaic_415_NDBI.tif'
 	write_image(imgrows, imgcols,imgbands, imggeotrans,edges, opath)

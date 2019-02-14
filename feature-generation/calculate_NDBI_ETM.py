@@ -41,8 +41,8 @@ def write_image(imgrows, imgcols, imgbands, imggeotrans,edges, opath):
 
 def ndbi_per_pixel(nir_val, swir_val):
 	return (swir_val - nir_val) /(swir_val + nir_val)	
-#calculate NDVI values (NIR-R)/(NIR + R)
-def generate_NDVI():	
+
+def generate_NDBI():	
 	ipath = '/scratch/slums/bl-slums/raw-img/PS-feb-2002-extract.tif'
 	[i1, imgrows, imgcols, imgbands, imggeotrans] = read_image(ipath)
 	print(imgrows, imgcols)
@@ -63,6 +63,6 @@ def generate_NDVI():
 
 if __name__ == "__main__":
 	print 'Starting...'
-	[imgrows, imgcols, imgbands, imggeotrans, edges] = generate_NDVI()
+	[imgrows, imgcols, imgbands, imggeotrans, edges] = generate_NDBI()
 	opath = '/scratch/slums/bl-slums/raw-img/ETM-feb-2002-extract-NDBI.tif'
 	write_image(imgrows, imgcols,imgbands, imggeotrans,edges, opath)
