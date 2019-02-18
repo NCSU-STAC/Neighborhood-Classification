@@ -30,6 +30,9 @@ Joint research project between NCSU, UNC Chapel Hill and Duke University to dete
 1. Preprocessing:
 * All images and any ancillary data should be in the same projection syystem. You can use GDAL to ensure all files in the same projection system.
 * Mosaic all the separate tiles into a single image. Once again, you can use gdal for this purpose
+* Perform pan-sharpening to combine 2m multi-spectral digital globe imagery and 0.5 m resolution panchromatic image. You can use Orfeo Toolbox for this purpose.
+* Perform pan-sharpening to combine 30m multi-spectral LANDSAT imagery and 15 m resolution panchromatic image. You can use Orfeo Toolbox for this purpose.
+ 
 
 2. Feature Generation
 * You generate any features that are relevant to your research. You can use tools such as <a href = "https://www.hexagongeospatial.com/products/power-portfolio/erdas-imagine"> ERDAS IMAGINE </a>, <a href = "https://www.harrisgeospatial.com/Software-Technology/ENVI"> ENVI </a>, <a href = "https://qgis.org/en/site/"> QGIS </a>, <a href = "https://www.orfeo-toolbox.org/"> Orfeo Toolbox </a> to generate features. In this project, we generated Haralick texture features [9] using orfeo toolbox, NDBI [10] and edge density using python. Code for generating these features is available in the feature-generation folder.
