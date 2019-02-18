@@ -10,28 +10,14 @@ testX = np.load('/scratch/slums/bl-slums/gt/final-pt-te-2-X')
 testY = np.load('/scratch/slums/bl-slums/gt/final-pt-te-2-Y')
 
 '''
-trainX = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/filtered-L3-6p-tr-X')
-trainY = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/filtered-L3-6p-tr-Y')
-testX = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/filtered-L3-6p-te-X')
-testY = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/filtered-L3-6p-te-Y')
+trainX = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/final-pt-tr-6-X')
+trainY = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/final-pt-tr-6-Y')
+testX = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/final-pt-te-6-X')
+testY = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/final-pt-te-6-Y')
 
 print trainX.shape, trainY.shape, testX.shape, testY.shape
 
 print np.max(trainY), np.max(testY)
-
-
-# One - Hot encode trainY
-for i in range(trainY.shape[0]):
-    curr = np.zeros((1,6))
-    curr[0,trainY[i]] = 1
-    if i == 0:
-       final_train_Y = curr
-    else:
-       final_train_Y = np.vstack((final_train_Y, curr))
-print final_train_Y.shape
-
-
-trainY = final_train_Y
 
 
 model = net.model

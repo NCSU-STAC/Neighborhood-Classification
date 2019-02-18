@@ -6,10 +6,10 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 
 # Read files 
-testX = np.load('/home/kgadira/data/final-pt-te-6-X')
-testY = np.load('/home/kgadira/data/final-pt-te-6-Y')
+testX = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/final-pt-te-6-X')
+testY = np.load('/pvfs2/kgadira@oss-storage-0-108/pvfs2/kgadira/data/final-pt-te-6-Y')
 
-path_to_model = '../models/model-6-cl-final/final-model.tflearn'
+path_to_model = '../models/model-6-cl-final1/final-model.tflearn'
 model = net.model
 model.load(path_to_model)
 
