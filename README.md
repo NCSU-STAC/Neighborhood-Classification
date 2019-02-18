@@ -32,11 +32,11 @@ Joint research project between NCSU, UNC Chapel Hill and Duke University to dete
 * Mosaic all the separate tiles into a single image. Once again, you can use gdal for this purpose
 
 2. Feature Generation
-* You generate any features that are relevant to your research. You can use tools such as [ERDAS Imagine][https://www.hexagongeospatial.com/products/power-portfolio/erdas-imagine], [ENVI][https://www.harrisgeospatial.com/Software-Technology/ENVI], [QGIS][https://qgis.org/en/site/], ![Orfeo Toolbox][https://www.orfeo-toolbox.org/] to generate features. In this project, we generated Haralick texture features [9] using orfeo toolbox, NDBI [10] and edge density using python. Code for generating these features is available in the feature-generation folder.
+* You generate any features that are relevant to your research. You can use tools such as <a href = "https://www.hexagongeospatial.com/products/power-portfolio/erdas-imagine"> ERDAS IMAGINE </a>, <a href = "https://www.harrisgeospatial.com/Software-Technology/ENVI"> ENVI </a>, <a href = "https://qgis.org/en/site/"> QGIS </a>, <a href = "https://www.orfeo-toolbox.org/"> Orfeo Toolbox </a> to generate features. In this project, we generated Haralick texture features [9] using orfeo toolbox, NDBI [10] and edge density using python. Code for generating these features is available in the feature-generation folder.
 
 3. Data collection
 * Data was collected in QGIS. Save your shape file as a point shape file. Each point in the shapefile should have the following information: lat, long values in the same projection as your raster data (if you are using ESRI shapefile format, this will already be included in your shapefile), a column named 'Type' to indicate training or testing data, a column named 'Cl' to indicate class. Class values should start from 0. For eg, if you are building a dataset with {builtup, background}, 'Cl' value of building is 0 and 'Cl' value of background is 1. 
-* Once this data is collected, use the scripts in the preprocessing folder to save the information as [pickle][https://docs.python.org/2/library/pickle.html] format to easily read and write them for all model training and evaluation purposes.
+* Once this data is collected, use the scripts in the preprocessing folder to save the information as <a href = "https://docs.python.org/2/library/pickle.html"> pickle </a> format to easily read and write them for all model training and evaluation purposes.
 4. Training/Evaluation/Prediction:
 * Once you have all the training, test data ready, generate the training models for each type of classification using the code in the respective folders.
 	* For pixel-based(patch-based), use the pixel-based(patch-based) folder.  
