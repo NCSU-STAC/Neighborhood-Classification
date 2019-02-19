@@ -1,6 +1,15 @@
 # Neighborhood-Classification
 Joint research project between NCSU, UNC Chapel Hill and Duke University to detect different types of low-income settlements from VHR imagery
 
+## Purpose of this project
+This code is developed for the purpose of classification of irregular settlements (slums). Full details can be found in the paper: 
+
+Krishna Karthik Gadiraju, Ranga Raju Vatsavai, Nikhil Kaza, Eric Wibbels, Anirudh Krishna: Machine Learning Approaches for Slum Detection Using Very High Resolution Satellite Images. IEEE ICDM International Workshop on Spatial and Spatiotemporal Data Mining: 2018: 1397-1404. https://ieeexplore.ieee.org/document/8637458
+
+## Acknowledgements
+1. Supported by a grant from Omidyar Network
+2. Supported by imagery grant from Digital Globe
+
 ## Necessary tools/softwares to be installed
 1. python 2.7
 2. Tensorflow
